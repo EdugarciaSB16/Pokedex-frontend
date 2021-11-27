@@ -1,0 +1,24 @@
+.pokemon {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    text-align: center;
+    background: linear-gradient(to bottom, rgb(254, 0, 1) 50%, white 50%);
+    border-radius: 50%;
+    border: 8px solid black;
+    animation: spin 1s linear infinite;
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
