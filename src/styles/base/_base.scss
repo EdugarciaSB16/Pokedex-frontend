@@ -1,7 +1,14 @@
+// Configuración de estilos base de la aplicación
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap');
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0px;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
 }
 
 html,
@@ -15,7 +22,7 @@ main {
 }
 
 .mt-1 {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .mt-5 {
@@ -23,11 +30,11 @@ main {
 }
 
 .mb-1 {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .mb-5 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .pointer {

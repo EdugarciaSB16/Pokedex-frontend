@@ -7,8 +7,8 @@ import { create } from './BaseService';
 
 const http = create();
 
-export const getPokemons = () => {
-    return http.get('/pokemons');
+export const getPokemons = (name) => {
+    return http.get('/pokemons', { params: { name: name } });
 };
 
 export const getPokemon = (id) => {

@@ -9,6 +9,7 @@ import { useParams } from 'react-router';
 import { getPokemon } from '../../../service/Endpoints';
 // componentes
 import { Spinner } from '../../Spinner/Spinner';
+import { CardDetail } from './CardDetail';
 
 export const PokemonDetail = () => {
     // Estado donde se almacena el pokémon seleccionado
@@ -23,58 +24,18 @@ export const PokemonDetail = () => {
             setPokemon(pokemon);
             setLoading(false);
         });
-    }, []);
+    }, [id]);
 
     console.log(pokemon);
 
     return (
         <div className="PokemonDetail">
-            <header className="List__header">
-                <div className="container">
-                    <h1>Pokédex</h1>
-                </div>
-            </header>
-            <main className="container List__main">
+            <main className="Detail__main">
                 {loading ? (
                     <Spinner />
                 ) : (
                     <main className="flex">
-                        <article className="Detail__card">
-                            <div className="card-header">
-
-                            </div>
-                            <div className="card-body">
-                                <img
-                                    src={pokemon[0].sprites.animated}
-                                    alt="imagen de vitoko"
-                                    className="card-body-img"
-                                />
-                                <h1 className="card-body-title">
-                                    <span>{pokemon[0].name}</span>
-                                    <h5>
-                                        #
-                                        {pokemon[0].number
-                                            .toString()
-                                            .padStart(3, '0')}
-                                    </h5>
-                                </h1>
-                                <p className="card-body-text">London</p>
-                            </div>
-                            <div className="card-footer">
-                                <div className="card-footer-social">
-                                    <h3>80K</h3>
-                                    <p>Followers</p>
-                                </div>
-                                <div className="card-footer-social">
-                                    <h3>803K</h3>
-                                    <p>Likes</p>
-                                </div>
-                                <div className="card-footer-social">
-                                    <h3>1.4K</h3>
-                                    <p>Photos</p>
-                                </div>
-                            </div>
-                        </article>
+                        <CardDetail {...pokemon[0]} />
                     </main>
                 )}
             </main>

@@ -1,3 +1,8 @@
+/**
+ * Configuración para realizar la petiones al backend
+ * 
+ */
+// Dependencias
 import axios from 'axios';
 
 export const create = (opts = {}) => {

@@ -1,5 +1,4 @@
 // Configuración de la app
-@import './base/settings';
 @import './base/base';
 @import './base/colorType';
 
@@ -9,3 +8,4 @@
 @import '../components/Pokedex/Item/PokemonItem.scss';
 @import '../components/Spinner/Spinner.scss';
 @import '../components/Pokedex/Detail/PokemonDetail.scss';
+@import '../components/Pokedex/Detail/CardDetail.scss';
