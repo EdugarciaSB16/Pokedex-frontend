@@ -18,15 +18,13 @@ export const PokemonDetail = () => {
     const [loading, setLoading] = useState(true);
     // Obtiene el ID del pokémon
     const { id } = useParams();
-
+    // Efecto que carga los datos del pokémon
     useEffect(() => {
         getPokemon(id).then((pokemon) => {
             setPokemon(pokemon);
             setLoading(false);
         });
     }, [id]);
-
-    console.log(pokemon);
 
     return (
         <div className="PokemonDetail">
