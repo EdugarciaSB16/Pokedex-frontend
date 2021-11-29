@@ -5,9 +5,10 @@
 // Dependencias
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 /**
  * Componente card que se renderiza en la vista detalle
- * 
+ *
  * @param {String} name              Nombre del pokémon
  * @param {Object} sprites           Objecto de imagenes del pokémon
  * @param {Number} number            Id del pokémon
@@ -15,10 +16,10 @@ import { Link } from 'react-router-dom';
  * @param {Number} hp                Salud del pokémon
  * @param {Number} attack            Puntos de ataque del pokémon
  * @param {Number} defense           Puntos de defense del pokémon
- * @param {Number} speed             Puntos de speed del pokémon 
+ * @param {Number} speed             Puntos de speed del pokémon
  * @param {Number} total             Puntos totales del pokémon
- * @param {Object} prev_evolution    Evolución anterior del del pokémon
- * @param {Object} next_evolution    Evolución siguiente del del pokémon
+ * @param {Array} prev_evolution    Evolución anterior del del pokémon
+ * @param {Array} next_evolution    Evolución siguiente del del pokémon
  */
 export const CardDetail = ({
     name,
@@ -37,7 +38,7 @@ export const CardDetail = ({
         <article className="Detail__card">
             <div className={`Detail__card-header ${type[0]}`}>
                 <Link to="/pokemons">
-                    <img src="/img/left.png" alt="arrow" />
+                    <img src="/img/left.png" style={{height:'50px'}} alt="arrow" />
                 </Link>
             </div>
             <div className="Detail__card-body">
@@ -92,4 +93,18 @@ export const CardDetail = ({
             </div>
         </article>
     );
+};
+
+CardDetail.propTypes = {
+    name: PropTypes.string.isRequired,
+    sprites: PropTypes.object.isRequired,
+    number: PropTypes.number.isRequired,
+    type: PropTypes.array.isRequired,
+    hp: PropTypes.number.isRequired,
+    attack: PropTypes.number.isRequired,
+    defense: PropTypes.number.isRequired,
+    speed: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired,
+    prev_evolution: PropTypes.array.isRequired,
+    next_evolution: PropTypes.array.isRequired,
 };

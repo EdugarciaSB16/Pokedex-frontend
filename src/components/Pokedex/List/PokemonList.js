@@ -51,6 +51,7 @@ export const PokemonList = () => {
                             <input
                                 type="text"
                                 name="search"
+                                className="input"
                                 placeholder="Search your pokemon"
                                 value={inputValue}
                                 onChange={handleChange}

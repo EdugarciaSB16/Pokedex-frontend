@@ -6,28 +6,37 @@
     background-size: 700px;
     background-color: #252628;
 
-    h1{
+    h1 {
         color: white;
         text-align: center;
-        padding-top: 100px ;
+        padding-top: 100px;
         font-family: 'Dancing Script', cursive;
         font-size: 62px;
     }
 
-    a{
+    a {
         position: absolute;
         top: 80%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: #D0003D;
+        background-color: #d0003d;
         color: white;
         width: 130px;
         font-size: 22px;
     }
 }
 
-@media (max-width: 768px) { 
-    .Home{
+@media (max-width: 768px) {
+    .Home {
         background-size: 450px;
+    }
+}
+
+@media (max-width: 468px) {
+    .Home {
+        background-size: 350px;
+        h1 {
+            font-size: 40px;
+        }
     }
 }

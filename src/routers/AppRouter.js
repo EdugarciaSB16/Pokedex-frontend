@@ -1,6 +1,6 @@
 /**
  * App router
- * 
+ *
  */
 // Dependencias
 import React from 'react';
@@ -12,7 +12,7 @@ import { PokemonList } from '../components/Pokedex/List/PokemonList';
 
 /**
  * Enrutador de la app
- * 
+ *
  */
 export const AppRouter = () => {
     return (

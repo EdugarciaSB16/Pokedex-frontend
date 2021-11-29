@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el componente <Home /> Debe de renderizar componente correctamente 1`] = `
+<div
+  className="Home"
+>
+  <h1>
+    Welcome to the pokédex
+  </h1>
+  <div>
+    <a
+      className="btn"
+      href="/pokemons"
+    >
+      Start
+    </a>
+  </div>
+</div>
+`;
